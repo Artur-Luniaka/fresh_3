@@ -1,0 +1,88 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "BladeMaster99",
+      "comment": "The most intense combat experience I've ever had! The physics are incredible and every slash feels satisfying.",
+      "rating": 5,
+      "avatar": "⚔️"
+    },
+    {
+      "id": 2,
+      "name": "SlashQueen",
+      "comment": "Amazing game! The enemy AI is challenging but fair, and the weapon upgrades make each playthrough unique.",
+      "rating": 5,
+      "avatar": "🔥"
+    },
+    {
+      "id": 3,
+      "name": "CombatKing",
+      "comment": "Finally, a stickman game that doesn't feel clunky. The controls are smooth and responsive.",
+      "rating": 4,
+      "avatar": "⚡"
+    },
+    {
+      "id": 4,
+      "name": "WarriorX",
+      "comment": "The visual effects are stunning! Every blood splatter and particle effect adds to the immersion.",
+      "rating": 5,
+      "avatar": "💀"
+    }
+  ],
+  "weapons": [
+    {
+      "id": 1,
+      "name": "Steel Katana",
+      "description": "A razor-sharp blade with enhanced cutting power and extended reach.",
+      "damage": 85,
+      "speed": 90,
+      "icon": "🗡️",
+      "rarity": "Rare"
+    },
+    {
+      "id": 2,
+      "name": "Combat Gauntlets",
+      "description": "Reinforced fighting gloves that increase attack speed and combo potential.",
+      "damage": 65,
+      "speed": 95,
+      "icon": "🥊",
+      "rarity": "Common"
+    },
+    {
+      "id": 3,
+      "name": "Thunder Axe",
+      "description": "A massive battle axe that deals devastating damage but slows movement.",
+      "damage": 95,
+      "speed": 70,
+      "icon": "🪓",
+      "rarity": "Epic"
+    },
+    {
+      "id": 4,
+      "name": "Phantom Dagger",
+      "description": "A mystical blade that can phase through armor and deal critical hits.",
+      "damage": 75,
+      "speed": 100,
+      "icon": "⚔️",
+      "rarity": "Legendary"
+    },
+    {
+      "id": 5,
+      "name": "Shadow Scythe",
+      "description": "A deadly curved blade that harvests souls and grants stealth abilities.",
+      "damage": 88,
+      "speed": 82,
+      "icon": "🪓",
+      "rarity": "Epic"
+    },
+    {
+      "id": 6,
+      "name": "Dragon's Breath",
+      "description": "A flaming sword that ignites enemies and leaves burning trails.",
+      "damage": 92,
+      "speed": 78,
+      "icon": "🔥",
+      "rarity": "Legendary"
+    }
+  ]
+}

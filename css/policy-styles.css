@@ -1,0 +1,296 @@
+/* Enhanced Policy Pages Styling */
+
+.policy-content,
+.cookie-content,
+.disclaimer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--steel-blue) 0%,
+    var(--impact-grey) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.policy-content:hover,
+.cookie-content:hover,
+.disclaimer-content:hover {
+  transform: translateY(-5px);
+  border-color: var(--victory-gold);
+  box-shadow: 0 20px 45px rgba(251, 146, 60, 0.3);
+}
+
+.policy-content .page-title,
+.cookie-content .page-title,
+.disclaimer-content .page-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+.policy-text,
+.cookie-text,
+.disclaimer-text {
+  color: var(--light-steel);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.policy-text h2,
+.cookie-text h2,
+.disclaimer-text h2 {
+  color: var(--victory-gold);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--combat-orange);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--combat-orange);
+}
+
+.policy-text h3,
+.cookie-text h3,
+.disclaimer-text h3 {
+  color: var(--combat-orange);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.8rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--blade-red);
+}
+
+.policy-text p,
+.cookie-text p,
+.disclaimer-text p {
+  margin-bottom: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.policy-text ul,
+.cookie-text ul,
+.disclaimer-text ul {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.policy-text li,
+.cookie-text li,
+.disclaimer-text li {
+  margin-bottom: 0.8rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.policy-text li::before,
+.cookie-text li::before,
+.disclaimer-text li::before {
+  content: "⚔️";
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.policy-text strong,
+.cookie-text strong,
+.disclaimer-text strong {
+  color: var(--victory-gold);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.policy-date,
+.cookie-date,
+.disclaimer-date {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--victory-gold);
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  border-radius: 15px;
+  border: 2px solid var(--combat-orange);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced section styling */
+.policy-content section,
+.cookie-content section,
+.disclaimer-content section {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.policy-content section:hover,
+.cookie-content section:hover,
+.disclaimer-content section:hover {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--combat-orange);
+  transform: translateX(5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .policy-content,
+  .cookie-content,
+  .disclaimer-content {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .policy-content .page-title,
+  .cookie-content .page-title,
+  .disclaimer-content .page-title {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .policy-text,
+  .cookie-text,
+  .disclaimer-text {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .policy-text h2,
+  .cookie-text h2,
+  .disclaimer-text h2 {
+    font-size: 1.4rem;
+    padding: 0.6rem 0.8rem;
+    margin: 2rem 0 0.8rem 0;
+  }
+
+  .policy-text h3,
+  .cookie-text h3,
+  .disclaimer-text h3 {
+    padding: 0.4rem 0.6rem;
+    margin: 1.2rem 0 0.6rem 0;
+  }
+
+  .policy-text ul,
+  .cookie-text ul,
+  .disclaimer-text ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .policy-text li,
+  .cookie-text li,
+  .disclaimer-text li {
+    margin-bottom: 0.6rem;
+    padding: 0.3rem 0;
+  }
+
+  .policy-date,
+  .cookie-date,
+  .disclaimer-date {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-content,
+  .cookie-content,
+  .disclaimer-content {
+    padding: 0.5rem;
+    margin: 0.3rem;
+  }
+
+  .policy-content .page-title,
+  .cookie-content .page-title,
+  .disclaimer-content .page-title {
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .policy-text,
+  .cookie-text,
+  .disclaimer-text {
+    padding: 0.8rem;
+  }
+
+  .policy-text h2,
+  .cookie-text h2,
+  .disclaimer-text h2 {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.6rem;
+    margin: 1.5rem 0 0.6rem 0;
+  }
+
+  .policy-text h3,
+  .cookie-text h3,
+  .disclaimer-text h3 {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.5rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .policy-text ul,
+  .cookie-text ul,
+  .disclaimer-text ul {
+    margin: 0.8rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .policy-text li,
+  .cookie-text li,
+  .disclaimer-text li {
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0;
+  }
+
+  .policy-text li::before,
+  .cookie-text li::before,
+  .disclaimer-text li::before {
+    left: -1rem;
+    font-size: 0.7rem;
+  }
+
+  .policy-date,
+  .cookie-date,
+  .disclaimer-date {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}

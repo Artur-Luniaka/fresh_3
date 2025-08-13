@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Stickman Slash | PixelQuestLegends.com</title>
+    <meta
+      name="description"
+      content="Get in touch with the Stickman Slash team. Contact us for support, feedback, or business inquiries. Ready to join the battle? Reach out to us today!"
+    />
+    <meta
+      name="keywords"
+      content="contact Stickman Slash, support, feedback, business inquiry, customer service, help, contact form, stickman slash contact"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/slash-styles.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main class="slash-main">
+      <section class="contact-hero">
+        <h1 class="page-title">Contact the Slash Team</h1>
+        <p class="page-subtitle">
+          Ready to join the battle? Get in touch with us!
+        </p>
+      </section>
+
+      <section class="battle-command-center">
+        <h2 class="section-title">Battle Command Center</h2>
+        <div class="command-center-container">
+          <div class="battle-intel-section">
+            <h3 class="intel-title">Contact Intelligence</h3>
+            <div class="intel-details">
+              <div class="intel-item">
+                <div class="intel-icon">📧</div>
+                <h4>Email</h4>
+                <p id="contact-email">contact@PixelQuestLegends.com</p>
+              </div>
+              <div class="intel-item">
+                <div class="intel-icon">📱</div>
+                <h4>Phone</h4>
+                <p id="contact-phone">+61 2 6200 9810</p>
+              </div>
+              <div class="intel-item">
+                <div class="intel-icon">📍</div>
+                <h4>Location</h4>
+                <p id="contact-location">
+                  14 Wattle Street<br />Queanbeyan NSW 2620<br />Australia
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="battle-map-section">
+            <div class="battle-map-container">
+              <iframe
+                src="https://maps.google.com/maps?q=14%20Wattle%20Street%20Queanbeyan%20NSW%202620%20Australia&hl=en&z=14&output=embed"
+                width="100%"
+                height="400"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <h2 class="section-title">Send Message</h2>
+        <form class="feedback-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+              required
+            />
+            <span class="error-message" id="phone-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              autocomplete="off"
+              style="resize: none"
+              required
+            ></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="js/contact-slash.js"></script>
+  </body>
+</html>

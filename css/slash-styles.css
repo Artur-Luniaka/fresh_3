@@ -1,0 +1,1463 @@
+/* CSS Variables - Combat Theme */
+:root {
+  --blade-red: #dc2626;
+  --impact-grey: #374151;
+  --slash-vibe: #1f2937;
+  --steel-blue: #1e40af;
+  --blood-crimson: #991b1b;
+  --shadow-dark: #111827;
+  --light-steel: #f3f4f6;
+  --combat-orange: #ea580c;
+  --victory-gold: #d97706;
+  --defeat-red: #dc2626;
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+  --transparent-black-7: rgba(0, 0, 0, 0.7);
+  --transparent-black-8: rgba(0, 0, 0, 0.8);
+  --transparent-black-9: rgba(0, 0, 0, 0.9);
+  --transparent-black-5: rgba(0, 0, 0, 0.5);
+  --transparent-black-6: rgba(0, 0, 0, 0.6);
+  --transparent-black-4: rgba(0, 0, 0, 0.4);
+  --transparent-black-3: rgba(0, 0, 0, 0.3);
+  --transparent-white-1: rgba(255, 255, 255, 0.1);
+  --transparent-blade-red-1: rgba(220, 38, 38, 0.1);
+  --transparent-blade-red-3: rgba(220, 38, 38, 0.3);
+  --transparent-blade-red-4: rgba(220, 38, 38, 0.4);
+  --transparent-blade-red-6: rgba(220, 38, 38, 0.6);
+  --transparent-blade-red-8: rgba(220, 38, 38, 0.8);
+  --transparent-blade-red-9: rgba(220, 38, 38, 0.9);
+  --transparent-steel-blue-9: rgba(30, 64, 175, 0.9);
+  --transparent-victory-gold-6: rgba(217, 119, 6, 0.6);
+  --transparent-blood-crimson-9: rgba(153, 27, 27, 0.9);
+  --transparent-impact-grey-9: rgba(55, 65, 81, 0.9);
+  --transparent-combat-orange-3: rgba(234, 88, 12, 0.3);
+  --transparent-combat-orange-4: rgba(234, 88, 12, 0.4);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--light-steel);
+  background: linear-gradient(
+    135deg,
+    var(--shadow-dark) 0%,
+    var(--slash-vibe) 100%
+  );
+  min-height: 100vh;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--victory-gold);
+  text-shadow: 2px 2px 4px var(--transparent-black-5);
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--blade-red);
+  text-shadow: 3px 3px 6px var(--transparent-black-7);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--light-steel);
+  margin-bottom: 3rem;
+}
+
+/* Header Styles */
+.slash-header {
+  background: linear-gradient(
+    90deg,
+    var(--shadow-dark) 0%,
+    var(--impact-grey) 100%
+  );
+  box-shadow: 0 4px 20px var(--transparent-blade-red-3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.game-logo-section {
+  display: flex;
+  justify-content: center;
+}
+
+.game-logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--blade-red);
+  text-shadow: 2px 2px 4px var(--transparent-black-5);
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+
+.logo-subtitle {
+  font-size: 0.9rem;
+  color: var(--light-steel);
+  font-weight: 300;
+}
+
+.combat-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--light-steel);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--blade-red);
+  background: var(--transparent-blade-red-1);
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--blade-red);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* Main Content */
+.slash-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.hero-arena {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 6rem 4rem;
+  background: linear-gradient(
+      135deg,
+      var(--transparent-black-7) 0%,
+      var(--transparent-black-4) 100%
+    ),
+    url("../images/slash-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+.hero-arena::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23dc2626" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  max-width: 500px;
+  align-self: flex-end;
+}
+
+.game-title {
+  font-size: 4rem;
+  color: var(--blade-red);
+  text-shadow: 4px 4px 8px var(--transparent-black-8);
+  margin-bottom: 1rem;
+  animation: slashGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes slashGlow {
+  from {
+    text-shadow: 4px 4px 8px var(--transparent-blade-red-8);
+  }
+  to {
+    text-shadow: 4px 4px 20px var(--blade-red),
+      0 0 30px var(--transparent-blade-red-5);
+  }
+}
+
+.hero-slogan {
+  font-size: 1.5rem;
+  color: var(--light-steel);
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+/* Hero Stats Plates */
+.hero-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.stat-plate {
+  background: linear-gradient(
+    135deg,
+    var(--transparent-blade-red-9) 0%,
+    var(--transparent-steel-blue-9) 100%
+  );
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 80px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--transparent-white-1);
+  transition: all 0.3s ease;
+}
+
+.stat-plate:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--transparent-blade-red-4);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--light-steel);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--light-steel);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.play-button {
+  background: linear-gradient(45deg, var(--blade-red), var(--combat-orange));
+  color: var(--pure-white);
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px var(--transparent-blade-red-4);
+}
+
+.play-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px var(--transparent-blade-red-6);
+}
+
+.play-button:active {
+  transform: translateY(-1px);
+}
+
+/* Hero Visual Elements */
+.hero-visual {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.stickman-fighter {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.fighter-body {
+  width: 100px;
+  height: 150px;
+  background: var(--light-steel);
+  border-radius: 50px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fighterIdle 2s ease-in-out infinite;
+}
+
+@keyframes fighterIdle {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.fighter-blade {
+  width: 120px;
+  height: 8px;
+  background: linear-gradient(90deg, var(--steel-blue), var(--light-steel));
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border-radius: 4px;
+  transform: rotate(-15deg);
+  animation: bladeSwing 3s ease-in-out infinite;
+}
+
+@keyframes bladeSwing {
+  0%,
+  100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Combat Features Section */
+.combat-features {
+  margin-bottom: 4rem;
+}
+
+.combat-features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.combat-feature-card {
+  background: linear-gradient(
+    135deg,
+    var(--transparent-blade-red-9) 0%,
+    var(--transparent-steel-blue-9) 100%
+  );
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 8px 25px var(--transparent-black-3);
+  transition: all 0.3s ease;
+  border: 1px solid var(--transparent-white-1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.combat-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    var(--transparent-white-1) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.combat-feature-card:hover::before {
+  transform: translateX(100%);
+}
+
+.combat-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px var(--transparent-blade-red-4);
+}
+
+.combat-feature-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px var(--transparent-black-3));
+  transition: all 0.3s ease;
+}
+
+.combat-feature-card:hover .combat-feature-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px var(--transparent-black-4));
+}
+
+.combat-feature-title {
+  color: var(--light-steel);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px var(--transparent-black-5);
+  transition: all 0.3s ease;
+}
+
+.combat-feature-card:hover .combat-feature-title {
+  color: var(--victory-gold);
+  text-shadow: 2px 2px 8px var(--transparent-victory-gold-6);
+}
+
+.combat-feature-description {
+  color: var(--light-steel);
+  line-height: 1.7;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.combat-feature-card:hover .combat-feature-description {
+  opacity: 1;
+  color: var(--light-steel);
+}
+
+/* Combat Guide Section */
+.combat-guide {
+  margin-bottom: 4rem;
+}
+
+.combat-guide-container {
+  background: linear-gradient(
+      135deg,
+      var(--transparent-black-8) 0%,
+      var(--transparent-black-6) 100%
+    ),
+    url("../images/slash-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.combat-guide-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    var(--transparent-black-7) 0%,
+    var(--transparent-black-4) 50%,
+    var(--transparent-black-7) 100%
+  );
+  z-index: 1;
+}
+
+.combat-controls-section {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 300px;
+}
+
+.combat-controls-title {
+  color: var(--victory-gold);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px var(--transparent-black-8);
+}
+
+.combat-controls-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.combat-control-card {
+  background: linear-gradient(
+    135deg,
+    var(--transparent-blade-red-9) 0%,
+    var(--transparent-steel-blue-9) 100%
+  );
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid var(--transparent-white-1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.combat-control-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    var(--transparent-white-1) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.combat-control-card:hover::before {
+  transform: translateX(100%);
+}
+
+.combat-control-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+}
+
+.combat-control-name {
+  color: var(--light-steel);
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px var(--transparent-black-5);
+  transition: all 0.3s ease;
+}
+
+.combat-control-card:hover .combat-control-name {
+  color: var(--victory-gold);
+  text-shadow: 1px 1px 4px var(--transparent-victory-gold-6);
+}
+
+.combat-control-description {
+  color: var(--light-steel);
+  line-height: 1.5;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.combat-control-card:hover .combat-control-description {
+  opacity: 1;
+}
+
+.combat-guide-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 300px;
+  padding-left: 2rem;
+}
+
+.combat-guide-title {
+  color: var(--victory-gold);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px var(--transparent-black-8);
+  line-height: 1.3;
+}
+
+.combat-guide-paragraph {
+  color: var(--light-steel);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px var(--transparent-black-5);
+  opacity: 0.95;
+}
+
+.combat-guide-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Player Testimonials Section */
+.player-testimonials {
+  margin-bottom: 4rem;
+}
+
+.testimonials-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Enemy Types Section */
+.enemy-types {
+  margin-bottom: 4rem;
+}
+
+.enemy-types-container {
+  background: linear-gradient(
+      135deg,
+      var(--transparent-black-8) 0%,
+      var(--transparent-black-6) 100%
+    ),
+    url("../images/slash-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.enemy-types-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    var(--transparent-black-7) 0%,
+    var(--transparent-black-4) 50%,
+    var(--transparent-black-7) 100%
+  );
+  z-index: 1;
+}
+
+.enemy-types-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 300px;
+  padding-right: 2rem;
+}
+
+.enemy-types-title {
+  color: var(--victory-gold);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px var(--transparent-black-8);
+  line-height: 1.3;
+}
+
+.enemy-types-paragraph {
+  color: var(--light-steel);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.95;
+}
+
+.enemy-types-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.enemy-types-section {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 300px;
+}
+
+.enemy-types-subtitle {
+  color: var(--victory-gold);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px var(--transparent-black-8);
+}
+
+.enemy-types-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enemy-type-card {
+  background: linear-gradient(
+    135deg,
+    var(--transparent-blood-crimson-9) 0%,
+    var(--transparent-impact-grey-9) 100%
+  );
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid var(--transparent-white-1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.enemy-type-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    var(--transparent-white-1) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.enemy-type-card:hover::before {
+  transform: translateX(100%);
+}
+
+.enemy-type-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--transparent-blood-crimson-4);
+}
+
+.enemy-type-name {
+  color: var(--light-steel);
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px var(--transparent-black-5);
+  transition: all 0.3s ease;
+}
+
+.enemy-type-card:hover .enemy-type-name {
+  color: var(--victory-gold);
+  text-shadow: 1px 1px 4px var(--transparent-victory-gold-6);
+}
+
+.enemy-type-description {
+  color: var(--light-steel);
+  line-height: 1.5;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.enemy-type-card:hover .enemy-type-description {
+  opacity: 1;
+}
+
+/* Weapon Upgrades Section */
+.weapon-upgrades {
+  margin-bottom: 4rem;
+}
+
+.weapons-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Footer Styles */
+.blade-footer {
+  background: linear-gradient(
+    90deg,
+    var(--shadow-dark) 0%,
+    var(--impact-grey) 100%
+  );
+  border-top: 3px solid var(--blade-red);
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.footer-title {
+  color: var(--blade-red);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-link {
+  color: var(--light-steel);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--blade-red);
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-contact-item {
+  margin-bottom: 0;
+  color: var(--light-steel);
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social-link {
+  color: var(--light-steel);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--blade-red);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+  background: var(--blade-red);
+  color: var(--pure-white);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--impact-grey);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.copyright-text {
+  color: var(--light-steel);
+  font-size: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+
+/* Contact Page Specific Styles */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-info {
+  margin-bottom: 4rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-item {
+  background: linear-gradient(
+    135deg,
+    var(--steel-blue) 0%,
+    var(--impact-grey) 100%
+  );
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 8px 25px var(--transparent-black-3);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+  color: var(--light-steel);
+  margin-bottom: 1rem;
+}
+
+.contact-map {
+  margin-bottom: 4rem;
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px var(--transparent-black-3);
+}
+
+.contact-form {
+  margin-bottom: 4rem;
+}
+
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    var(--impact-grey) 0%,
+    var(--slash-vibe) 100%
+  );
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px var(--transparent-black-3);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--light-steel);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--impact-grey);
+  border-radius: 8px;
+  background: var(--shadow-dark);
+  color: var(--light-steel);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blade-red);
+}
+
+.submit-button {
+  background: linear-gradient(45deg, var(--blade-red), var(--combat-orange));
+  color: var(--pure-white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--transparent-blade-red-4);
+}
+
+/* Legal Pages Styles */
+.disclaimer-content,
+.cookie-content,
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    var(--impact-grey) 0%,
+    var(--slash-vibe) 100%
+  );
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px var(--transparent-black-3);
+}
+
+.disclaimer-text h2,
+.cookie-text h2,
+.privacy-text h2 {
+  color: var(--victory-gold);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.disclaimer-text h3,
+.cookie-text h3,
+.privacy-text h3 {
+  color: var(--light-steel);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer-text p,
+.cookie-text p,
+.privacy-text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.disclaimer-text ul,
+.cookie-text ul,
+.privacy-text ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.disclaimer-text li,
+.cookie-text li,
+.privacy-text li {
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer-text a,
+.cookie-text a,
+.privacy-text a {
+  color: var(--blade-red);
+  text-decoration: none;
+}
+
+.disclaimer-text a:hover,
+.cookie-text a:hover,
+.privacy-text a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer-date,
+.cookie-date,
+.privacy-date {
+  text-align: center;
+  color: var(--victory-gold);
+  font-weight: 600;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--impact-grey);
+}
+
+/* Updates Page Specific Styles */
+.updates-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.patch-notes {
+  margin-bottom: 4rem;
+}
+
+.patches-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.battle-chronicles {
+  margin-bottom: 4rem;
+}
+
+.chronicles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header Responsive Adjustments */
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-list {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    min-width: 120px;
+    text-align: center;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .header-container,
+  .footer-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .slash-main {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-arena {
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-self: center;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+  }
+
+  .game-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .combat-guide-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .combat-guide-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .combat-controls-section {
+    min-width: 100%;
+  }
+
+  .enemy-types-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .enemy-types-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .enemy-types-section {
+    min-width: 100%;
+  }
+
+  .combat-control-card {
+    padding: 1rem 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .combat-control-name {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .combat-control-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .combat-features-grid,
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .combat-feature-card,
+  .enemy-card,
+  .contact-item {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .disclaimer-content,
+  .cookie-content,
+  .privacy-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-container,
+  .footer-container {
+    padding: 1rem;
+  }
+
+  .slash-main {
+    padding: 1rem;
+  }
+
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .hero-slogan {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .combat-guide-container {
+    padding: 2rem 1rem;
+  }
+
+  .enemy-types-container {
+    padding: 2rem 1rem;
+  }
+
+  .combat-control-card {
+    padding: 0.8rem 0.6rem;
+  }
+
+  .combat-control-name {
+    font-size: 0.9rem;
+  }
+
+  .combat-control-description {
+    font-size: 0.75rem;
+  }
+
+  .play-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .disclaimer-content,
+  .cookie-content,
+  .privacy-content {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Cookie Consent Bar Styles */
+.cookie-consent-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    135deg,
+    var(--shadow-dark) 0%,
+    var(--impact-grey) 100%
+  );
+  border-top: 3px solid var(--combat-orange);
+  box-shadow: 0 -4px 20px var(--transparent-black-5);
+  z-index: 9999;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.cookie-consent-bar.show {
+  transform: translateY(0);
+}
+
+.cookie-banner-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cookie-banner-text {
+  color: var(--light-steel);
+  font-size: 1rem;
+  line-height: 1.5;
+  flex: 1;
+  margin: 0;
+}
+
+.accept-cookies-btn {
+  background: linear-gradient(
+    135deg,
+    var(--combat-orange) 0%,
+    var(--victory-gold) 100%
+  );
+  color: var(--pure-white);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px var(--transparent-combat-orange-3);
+}
+
+.accept-cookies-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--transparent-combat-orange-4);
+}
+
+.accept-cookies-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Cookie Bar */
+@media (max-width: 768px) {
+  .cookie-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .cookie-banner-text {
+    font-size: 0.9rem;
+  }
+
+  .accept-cookies-btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-banner-content {
+    padding: 1rem 0.8rem;
+  }
+
+  .cookie-banner-text {
+    font-size: 0.85rem;
+  }
+
+  .accept-cookies-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
