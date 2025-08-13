@@ -465,7 +465,7 @@ style.textContent = `
      }
     
          .chronicle-card {
-         background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(55, 65, 81, 0.9) 100%), url('../images/slash-hero.jpg');
+         background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(55, 65, 81, 0.9) 100%), url('/images/slash-hero.jpg');
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;

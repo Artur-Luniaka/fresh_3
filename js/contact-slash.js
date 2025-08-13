@@ -240,7 +240,6 @@ function showNotificationWithProgress() {
 // Load contact information
 function loadContactInfo() {
   // Contact info is already in HTML, but we could load it from JSON if needed
-  console.log("Contact information loaded");
 }
 
 // Add CSS for form validation and success messages
