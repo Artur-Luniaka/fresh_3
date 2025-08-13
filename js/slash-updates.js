@@ -193,7 +193,6 @@ function addBattleUpdateCardListeners() {
     });
   });
 }
-
 // Add CSS for battle updates and chronicles
 const style = document.createElement("style");
 style.textContent = `
@@ -465,10 +464,6 @@ style.textContent = `
      }
     
          .chronicle-card {
-         background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(55, 65, 81, 0.9) 100%), url('/images/slash-hero.jpg');
-         background-size: cover;
-         background-position: center;
-         background-repeat: no-repeat;
          padding: 2rem;
          border-radius: 15px;
          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
