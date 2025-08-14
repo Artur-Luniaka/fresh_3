@@ -203,7 +203,7 @@ h6 {
 .slash-main {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
 }
 
 /* Hero Section */
@@ -215,7 +215,7 @@ h6 {
   padding: 6rem 4rem;
   background: linear-gradient(
       135deg,
-      var(--transparent-black-7) 0%,
+      var(--transparent-black-7) 100%,
       var(--transparent-black-4) 100%
     ),
     url("../images/slash-hero.jpg");
@@ -880,7 +880,7 @@ h6 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -900,7 +900,7 @@ h6 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -947,6 +947,7 @@ h6 {
 .contact-hero {
   text-align: center;
   margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .contact-info {
@@ -1139,6 +1140,7 @@ h6 {
 .updates-hero {
   text-align: center;
   margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .patch-notes {
@@ -1200,7 +1202,7 @@ h6 {
   }
 
   .slash-main {
-    padding: 2rem 1.5rem;
+    padding: 0 1.5rem;
   }
 }
 
@@ -1322,7 +1324,7 @@ h6 {
   }
 
   .slash-main {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   .game-title {

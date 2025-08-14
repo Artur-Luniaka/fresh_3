@@ -16,6 +16,7 @@
   border: 2px solid transparent;
   transition: all 0.3s ease;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .policy-content:hover,
